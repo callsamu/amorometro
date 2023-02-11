@@ -1,14 +1,13 @@
-import SiteHead from '../components/SiteHead.tsx';
-import styles from '@/styles/Home.module.css'
+import SiteHead from '../components/SiteHead';
+import SiteBody from '../components/SiteBody';
 
 export default function Home() {
   return (
     <>
       <SiteHead title="Amorometro" />
-      <>
-      <main className={styles.main}>
+      <SiteBody>
         <h1> Hello World </h1>
-      </main>
+      </SiteBody>
     </>
-  )
+  );
 }
