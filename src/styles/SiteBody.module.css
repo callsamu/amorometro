@@ -1,15 +1,21 @@
 .header {
     width: 100%;
-    height: 4rem;
+    height: 6rem;
 
     background-color: white;
+    border-color: #CCCCCC;
 }
 
 .nav {
+    padding: 0rem 2rem;
     height: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.logo {
 }
 
 .mainContainer {
