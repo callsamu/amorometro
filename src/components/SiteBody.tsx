@@ -1,6 +1,8 @@
 import { ReactNode } from 'react';
 import styles from '../styles/SiteBody.module.css';
 import Image from 'next/image';
+import SiteParticles from './SiteParticles';
+import Link from 'next/link';
 
 interface Props {
     children: ReactNode;
@@ -11,19 +13,15 @@ export default function SiteBody({ children }: Props) {
         <>
             <header className={styles.header}>
                 <nav className={styles.nav}>
-                    <Image
-                     src="/amorometro.svg"
-                     alt="amorometro"
-                     width={190}
-                     height={200}/>
-                    <span> Sobre </span>
+                    <Link href="/">
+                        <Image src="/logo.svg" alt="amorometro" width={200} height={200}/>
+                    </Link>
                 </nav>
             </header>
-            <div className={styles.mainContainer}>
-                <main className={styles.main}>
-                    { children }
-                </main>
-            </div>
+            <SiteParticles />
+            <main className={styles.main}>
+                { children }
+            </main>
         </>
     )
 }

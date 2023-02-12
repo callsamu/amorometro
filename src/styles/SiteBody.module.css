@@ -4,27 +4,26 @@
 
     background-color: white;
     border-color: #CCCCCC;
+
+    margin-bottom: 4rem;
 }
 
 .nav {
-    padding: 0rem 2rem;
+    padding: 0rem 1rem;
     height: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-}
-
-.mainContainer {
-    height: 100vh;
-    width: 100vw;
-
-    display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+.nav > * {
+    margin: 0 2rem;
+}
+
+.about {
+    color: #505050;
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .main {
@@ -34,7 +33,6 @@
     background-color: white;
 
     width: 60%;
-    transform: translateY(-0rem);
 }
 
 @media screen and (max-width: 1000px) {
