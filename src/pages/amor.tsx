@@ -3,8 +3,10 @@ import SiteHead from "@/components/SiteHead";
 import { NextRouter, useRouter } from "next/router";
 import { computeChance } from "@/lib/calculator";
 import Paragraph from "@/components/Paragraph";
+import Counter from "@/components/Counter";
 import getResultTexts from "@/lib/text";
 import Link from "next/link";
+import Image from "next/image";
 
 enum Order {
   First,
@@ -15,7 +17,6 @@ function getName(router: NextRouter, order: Order): string {
   const name = order === Order.First ? 
     router.query["first"] : Order.Second ? 
     router.query["second"] : "";
-
 
   if (Array.isArray(name)) {
     return name.join(" ").trim().toLocaleLowerCase();
@@ -38,7 +39,9 @@ export default function Amor() {
     <>
       <SiteHead title="amor"/>
       <SiteBody>
-        <h1>Hello World: {first} + {second} = {chance} </h1>
+        <h1>Hello World: {first} + {second} </h1>
+        <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
+        <Counter ceiling={chance} duration={10000} />
         <Paragraph> {getResultTexts({first: first, second: second, chance: chance})} </Paragraph>
         <button><Link href="/">return</Link></button>
       </SiteBody>
