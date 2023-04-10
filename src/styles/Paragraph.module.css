@@ -1,4 +1,8 @@
 .paragraph {
   margin: 0 auto;
   padding: 1rem;
+
+  font-size: 0.9rem;
+
+  width: clamp(5rem, 90%, 40rem);
 }

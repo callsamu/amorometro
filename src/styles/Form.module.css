@@ -1,0 +1,61 @@
+.form {
+  text-align: center;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFlex {
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.labelFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputText {
+  border-radius: 1rem;
+  border: 1px solid #CCCCCC;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+}
+
+.submit {
+  padding: 0.5rem 1rem;
+  width: 10rem;
+  margin: 1rem auto;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  background-color: #11C2E9;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.label {
+  margin: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1000px) {
+  .form {
+    width: 90%;
+  }
+
+  .inputFlex {
+    flex-direction: column;
+  }
+}
