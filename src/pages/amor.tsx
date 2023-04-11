@@ -32,22 +32,22 @@ export default function Amor() {
 
   const first = getName(router, Order.First);
   const second = getName(router, Order.Second);
-  const chance = computeChance(first, second);
+  const result = computeChance(first, second);
 
-  const handleClick = () => router.push("/");
+  const handleClick = () => router.push("/")
 
   return (
     <>
-      <SiteHead title={`${first} + ${second} | Amorometro`}/>
+      <SiteHead title={`${result.first} + ${result.second} | Amorometro`}/>
       <SiteBody>
-        <h1>{first} + {second} </h1>
+        <h1>{result.first} + {result.second} </h1>
         <div className={styles.heartContainer}>
           <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
           <h2 className={styles.counter}>
-            <Counter ceiling={chance} duration={5000} />%
+            <Counter ceiling={result.chance} duration={5000} />%
           </h2>
         </div>
-        <Paragraph className={styles.text}> {getResultTexts({first: first, second: second, chance: chance})} </Paragraph>
+        <Paragraph> {getResultTexts(result)} </Paragraph>
         <button onClick={handleClick} className={styles.button}>Regressar</button>
       </SiteBody>
     </>
