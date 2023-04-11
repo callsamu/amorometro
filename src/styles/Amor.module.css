@@ -1,0 +1,29 @@
+
+.heartContainer {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  text-align: center;
+}
+
+.counter {
+  color: white;
+  position: relative;
+  top: -7rem;
+}
+
+.button {
+  width: 8rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+
+  font-size: 1.1rem;
+
+  cursor: pointer;
+
+  background-color: #11C2E9;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+

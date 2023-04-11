@@ -3,6 +3,6 @@
   padding: 1rem;
 
   font-size: 0.9rem;
-
+  text-align: left;
   width: clamp(5rem, 90%, 40rem);
 }
