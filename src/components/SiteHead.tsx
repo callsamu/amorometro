@@ -12,10 +12,10 @@ export default function SiteHead({ title }: Props) {
         <Head>
             <title>{title}</title>
 
-            <meta name="og:title" content="Amorometro" />
-            <meta name="og:type" content="website" />
-            <meta name="og:image" content="/open-graph-image.png" />
-            <meta name="og:url" content="https://amorometro.pages.dev/" />
+            <meta property="og:title" content="Amorometro" />
+            <meta property="og:type" content="website" />
+            <meta property="og:image" content="/open-graph-image.png" />
+            <meta property="og:url" content="https://amorometro.pages.dev/" />
 
             <meta name="description" content={description} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
