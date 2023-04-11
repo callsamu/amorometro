@@ -4,9 +4,10 @@ interface Props {
     title: string;
 }
 
-const description = "Descubre la verdadera compatibilidad con tu pareja con nuestro Amorómetro basado en numerología. ¡Obtén resultados precisos y confiables en segundos!";
 
 export default function SiteHead({ title }: Props) {
+  const description = "Descubre la verdadera compatibilidad con tu pareja con nuestro Amorómetro basado en numerología. ¡Obtén resultados precisos y confiables en segundos!";
+  const url = "https://amorometro.pages.dev/";
 
     return (
         <Head>
@@ -14,8 +15,9 @@ export default function SiteHead({ title }: Props) {
 
             <meta property="og:title" content="Amorometro" />
             <meta property="og:type" content="website" />
-            <meta property="og:image" content="/open-graph-image.png" />
-            <meta property="og:url" content="https://amorometro.pages.dev/" />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={`http://${url}//open-graph-image.png`} />
+            <meta property="og:url" content={url} />
 
             <meta name="description" content={description} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
