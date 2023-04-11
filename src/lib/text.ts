@@ -32,7 +32,7 @@ const templates = [
     puede mejorar y crecer más fuerte. ¡Buena suerte!`
   ),
   (r: Result) => stripIdents(`
-    Según nuestro Amorómetro, {r.first} y ${r.second} tienen una 
+    Según nuestro Amorómetro, ${r.first} y ${r.second} tienen una 
     compatibilidad del ${r.chance}. Este es un resultado 
     prometedor y sugiere una relación amorosa positiva, pero también 
     requiere trabajo y compromiso de ambas partes. Hay una base sólida 
