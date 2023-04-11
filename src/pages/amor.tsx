@@ -5,8 +5,8 @@ import { computeChance } from "@/lib/calculator";
 import Paragraph from "@/components/Paragraph";
 import Counter from "@/components/Counter";
 import getResultTexts from "@/lib/text";
-import Link from "next/link";
 import Image from "next/image";
+import styles from "@/styles/Amor.module.css";
 
 enum Order {
   First,
@@ -32,18 +32,23 @@ export default function Amor() {
 
   const first = getName(router, Order.First);
   const second = getName(router, Order.Second);
-
   const chance = computeChance(first, second);
+
+  const handleClick = () => router.push("/");
 
   return (
     <>
-      <SiteHead title="amor"/>
+      <SiteHead title={`${first} + ${second} | Amorometro`}/>
       <SiteBody>
-        <h1>Hello World: {first} + {second} </h1>
-        <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
-        <Counter ceiling={chance} duration={10000} /> {chance}
+        <h1>{first} + {second} </h1>
+        <div className={styles.heartContainer}>
+          <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
+          <h2 className={styles.counter}>
+            <Counter ceiling={chance} duration={5000} />%
+          </h2>
+        </div>
         <Paragraph> {getResultTexts({first: first, second: second, chance: chance})} </Paragraph>
-        <Link href="/"><button>return</button></Link>
+        <button onClick={handleClick} className={styles.button}>Regressar</button>
       </SiteBody>
     </>
   );
