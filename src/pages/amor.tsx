@@ -48,7 +48,7 @@ export default function Amor() {
             <Counter ceiling={result.chance} duration={5000} />%
           </h2>
         </div>
-        <Paragraph> {getResultTexts(result)} </Paragraph>
+        <Paragraph className={styles.text}> {getResultTexts(result)} </Paragraph>
         <button onClick={handleClick} className={styles.button}>Regressar</button>
       </SiteBody>
     </>
