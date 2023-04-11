@@ -1,8 +1,29 @@
+@keyframes fadeInUp {
+  from { 
+    opacity: 0;
+    transform: translateY(4rem);
+  }
+  to { 
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.text {
+  animation: fadeIn 2s;
+  animation-delay: 5s;
+  animation-fill-mode: backwards;
+}
 
 .heartContainer {
   margin-top: 1rem;
   margin-bottom: -1rem;
   text-align: center;
+  animation: fadeInUp 2s;
 }
 
 .counter {
@@ -25,5 +46,9 @@
   color: white;
   border-radius: 1rem;
   font-weight: 500;
+
+  animation: fadeIn 2s;
+  animation-delay: 7s;
+  animation-fill-mode: backwards;
 }
 
