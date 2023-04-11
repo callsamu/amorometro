@@ -31,7 +31,7 @@ export default function Form() {
           <input className={styles.inputText} type="text" placeholder="Maria" name="first" id="first"/>
         </div>
         <div className={styles.labelFlex}>
-          <label className={styles.label} htmlFor="second">Nombre de tu Puta Madre</label>
+          <label className={styles.label} htmlFor="second">Nombre de tu Crush</label>
           <input className={styles.inputText} type="text" placeholder="Juan" name="second" id="second"/>
         </div>
       </div>
