@@ -30,9 +30,10 @@ function getName(router: NextRouter, order: Order): string {
 export default function Amor() {
   const router = useRouter()
 
-  const first = getName(router, Order.First);
-  const second = getName(router, Order.Second);
-  const result = computeChance(first, second);
+  const result = computeChance(
+    getName(router, Order.First), 
+    getName(router, Order.Second)
+  );
 
   const handleClick = () => router.push("/")
 
