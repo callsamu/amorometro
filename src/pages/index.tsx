@@ -3,14 +3,12 @@ import SiteBody from '../components/SiteBody';
 import Paragraph from '../components/Paragraph';
 import Form from '../components/Form';
 
-import styles from '../styles/Home.module.css';
-
 export default function Home() {
   return (
     <>
       <SiteHead title="Amorometro" />
       <SiteBody>
-        <h1 className={styles.title}> La Mejor Calculadora de Amor </h1>
+        <h1> La Mejor Calculadora de Amor </h1>
 
         <Form />
 
