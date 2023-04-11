@@ -41,9 +41,9 @@ export default function Amor() {
       <SiteBody>
         <h1>Hello World: {first} + {second} </h1>
         <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
-        <Counter ceiling={chance} duration={10000} />
+        <Counter ceiling={chance} duration={10000} /> {chance}
         <Paragraph> {getResultTexts({first: first, second: second, chance: chance})} </Paragraph>
-        <button><Link href="/">return</Link></button>
+        <Link href="/"><button>return</button></Link>
       </SiteBody>
     </>
   );
