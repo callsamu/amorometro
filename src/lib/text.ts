@@ -6,7 +6,7 @@ function stripIdents(str: string): string {
 
 const templates = [
   (r: Result) => stripIdents(`Según nuestro Amorómetro, ${r.first} y 
-    ${r.second} tienen una compatibilidad del ${r.chance}. 
+    ${r.second} tienen una compatibilidad del ${r.chance}%. 
     Este resultado sugiere que hay una falta de armonía y conexión en 
     su relación en este momento. Es importante que ambos reflexionen sobre 
     sus sentimientos y metas en la relación y determinen si están dispuestos 
@@ -15,7 +15,7 @@ const templates = [
     Les deseamos lo mejor.
   `),
   (r: Result) => stripIdents(`Según nuestro Amorómetro, ${r.first} y 
-    ${r.second} tienen una compatibilidad del ${r.chance}. 
+    ${r.second} tienen una compatibilidad del ${r.chance}%. 
     Este resultado sugiere que hay algunos obstáculos significativos 
     en su relación que deben ser abordados antes de que puedan avanzar 
     juntos. Es importante que ambos trabajen juntos para superar estos 
@@ -24,7 +24,7 @@ const templates = [
     mutua. ¡Buena suerte!
   `),
   (r: Result) => stripIdents(`Según nuestro Amorómetro, ${r.first} y
-    ${r.second} tienen una compatibilidad del ${r.chance}. 
+    ${r.second} tienen una compatibilidad del ${r.chance}%. 
     Este resultado sugiere que hay ciertas diferencias y desafíos en 
     su relación que pueden requerir un trabajo adicional para superar. 
     Es importante que ambos se comuniquen abiertamente y trabajen juntos 
@@ -33,7 +33,7 @@ const templates = [
   ),
   (r: Result) => stripIdents(`
     Según nuestro Amorómetro, ${r.first} y ${r.second} tienen una 
-    compatibilidad del ${r.chance}. Este es un resultado 
+    compatibilidad del ${r.chance}%. Este es un resultado 
     prometedor y sugiere una relación amorosa positiva, pero también 
     requiere trabajo y compromiso de ambas partes. Hay una base sólida 
     para el amor, pero es importante seguir fortaleciéndola a través de 
