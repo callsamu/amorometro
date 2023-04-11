@@ -13,7 +13,7 @@ export default function SiteHead({ title }: Props) {
             <title>{title}</title>
 
             <meta name="og:title" content="Amorometro" />
-            <meta name="og:type" content={description} />
+            <meta name="og:type" content="website" />
             <meta name="og:image" content="/open-graph-image.png" />
             <meta name="og:url" content="https://amorometro.pages.dev/" />
 
