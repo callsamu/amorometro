@@ -6,15 +6,19 @@ export interface Result {
   chance: number;
 }
 
+function capitalize(str: string): string {
+  return str.charAt(0).toLocaleUpperCase() + str.slice(1);
+}
+
 export function computeChance(name1: string, name2: string): Result {
   const limit = 10_000;
 
   const m = hash.hashString(name1, limit);
   const n = hash.hashString(name2, limit);
-  
+
   return {
-    first: name1,
-    second: name2,
+    first: capitalize(name1.split(" ")[0]),
+    second: capitalize(name2.split(" ")[0]),
     chance: hash.hashNumber(m + n, limit) / 100
   };
 }
