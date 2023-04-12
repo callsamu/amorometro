@@ -7,6 +7,7 @@ import Counter from "@/components/Counter";
 import getResultTexts from "@/lib/text";
 import Image from "next/image";
 import styles from "@/styles/Amor.module.css";
+import ShareButton from "@/components/ShareButton";
 
 enum Order {
   First,
@@ -50,6 +51,7 @@ export default function Amor() {
         </div>
         <Paragraph className={styles.text}> {getResultTexts(result)} </Paragraph>
         <button onClick={handleClick} className={styles.button}>Regressar</button>
+        <ShareButton results={result} className={styles.button} />
       </SiteBody>
     </>
   );
