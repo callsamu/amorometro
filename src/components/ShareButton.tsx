@@ -1,6 +1,5 @@
 import { Result } from "@/lib/calculator";
 import { stripIdents } from "@/lib/text";
-import { useEffect } from "react";
 
 type Props = {
   className: string;
@@ -18,14 +17,14 @@ export default function ShareButton({ className, results }: Props) {
       e ${results.second} es del ${results.chance}%. 
       ¡Ven y descubre lo compatible que eres con tu crush!
     `)
-  };;
+  };
 
-  useEffect(() => {
+  if (typeof window !== "undefined") {
     if (navigator.share && navigator.canShare()) {
       handleClick = () => navigator.share(shareData);
       canShare = true;
     }
-  }, []);
+  }
 
   if (canShare) {
     return <button className={className} onClick={handleClick}> Compartir </button>;
