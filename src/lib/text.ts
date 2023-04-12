@@ -1,6 +1,6 @@
 import { Result } from "./calculator";
 
-function stripIdents(str: string): string {
+export function stripIdents(str: string): string {
   return str.split('\n').map(str => str.trim()).join(' ');
 }
 
