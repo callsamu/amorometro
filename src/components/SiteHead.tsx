@@ -16,7 +16,7 @@ export default function SiteHead({ title }: Props) {
             <meta property="og:title" content="Amorometro" />
             <meta property="og:type" content="website" />
             <meta property="og:description" content={description} />
-            <meta property="og:image:secure_url" content={`${url}/open-graph-image.png`} />
+            <meta property="og:image" content={`${url}/open-graph-image.png`} />
             <meta property="og:url" content={url} />
 
             <meta name="description" content={description} />
