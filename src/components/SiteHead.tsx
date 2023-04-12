@@ -1,3 +1,4 @@
+import { stripIdents } from '@/lib/text';
 import Head from 'next/head';
 
 interface Props {
@@ -6,7 +7,12 @@ interface Props {
 
 
 export default function SiteHead({ title }: Props) {
-  const description = "Descubre la verdadera compatibilidad con tu pareja con nuestro Amorómetro basado en numerología. ¡Obtén resultados precisos y confiables en segundos!";
+  const description = stripIdents(`
+    Descubre la verdadera compatibilidad con 
+    tu pareja con nuestro Amorómetro basado en numerología. 
+    ¡Obtén resultados precisos y confiables en segundos!
+  `);
+
   const url = "https://amorometro.pages.dev";
 
     return (
