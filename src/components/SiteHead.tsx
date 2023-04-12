@@ -19,9 +19,9 @@ export default function SiteHead({ title }: Props) {
             <meta property="og:image" content={`${url}/open-graph-image.png`} />
             <meta property="og:url" content={url} />
 
-            <link rel="manifest" href="/manifest.json" />
+            <link rel="manifest" href="/manifest.webmanifest" />
             <link rel="apple-touch-icon" href="/icon.png" />
-            <meta name="theme-color" content="fefefe" />
+            <meta name="theme-color" content="#fefefe" />
 
             <meta name="description" content={description} />
             <meta name="viewport" content="width=device-width, initial-scale=1" />
