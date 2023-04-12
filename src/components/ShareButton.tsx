@@ -1,5 +1,8 @@
 import { Result } from "@/lib/calculator";
 import { stripIdents } from "@/lib/text";
+import { useEffect, useState } from "react";
+
+type Handler = () => void;
 
 type Props = {
   className: string;
@@ -7,24 +10,24 @@ type Props = {
 }
 
 export default function ShareButton({ className, results }: Props) {
-  let canShare = false;
-  let handleClick = () => {};
+  let [canShare, setCanShare] = useState(false);
+  let [handleClick, setHandleClick] = useState<Handler>(() => {});
 
-  const shareData = {
-    url: "https://amorometro.pages.dev",
-    text: stripIdents(`
-      Según amorometro, la compatibilidad entre ${results.first} 
-      e ${results.second} es del ${results.chance}%. 
-      ¡Ven y descubre lo compatible que eres con tu crush!
-    `)
-  };
+  useEffect(() => {
+     const shareData = {
+        url: window.location.href,
+        text: stripIdents(`
+          Según amorometro, la compatibilidad entre ${results.first} 
+          e ${results.second} es del ${results.chance}%. 
+          ¡Ven y descubre lo compatible que eres con tu crush!
+        `)
+      };
 
-  if (typeof window !== "undefined") {
     if (navigator.share && navigator.canShare()) {
-      handleClick = () => navigator.share(shareData);
-      canShare = true;
+      setHandleClick(() => navigator.share(shareData));
+      setCanShare(true);
     }
-  }
+  });
 
   if (canShare) {
     return <button className={className} onClick={handleClick}> Compartir </button>;
