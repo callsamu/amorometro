@@ -17,8 +17,8 @@ export function computeChance(name1: string, name2: string): Result {
   const n = hash.hashString(name2, limit);
 
   return {
-    first: capitalize(name1.split(" ")[0]),
-    second: capitalize(name2.split(" ")[0]),
+    first: capitalize(name1),
+    second: capitalize(name2),
     chance: hash.hashNumber(m + n, limit) / 100
   };
 }
