@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import styles from '../styles/SiteBody.module.css';
+import logo from "@/assets/logo.webp";
 import Image from 'next/image';
 import SiteParticles from './SiteParticles';
 import Link from 'next/link';
@@ -14,7 +15,7 @@ export default function SiteBody({ children }: Props) {
             <header className={styles.header}>
                 <nav className={styles.nav}>
                     <Link href="/">
-                        <Image src="/logo.webp" alt="amorometro" width={260} height={65}/>
+                        <Image src={logo} alt="amorometro" width={260} height={65}/>
                     </Link>
 
                 </nav>

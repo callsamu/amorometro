@@ -7,6 +7,7 @@ import Counter from "@/components/Counter";
 import getResultTexts from "@/lib/text";
 import Image from "next/image";
 import styles from "@/styles/Amor.module.css";
+import heart from "@/assets/heart.webp";
 import ShareButton from "@/components/ShareButton";
 
 enum Order {
@@ -44,7 +45,7 @@ export default function Amor() {
       <SiteBody>
         <h1>{result.first} + {result.second} </h1>
         <div className={styles.heartContainer}>
-          <Image src="/heart.webp" width={200} height={200} alt="heart" />
+          <Image src={heart} width={200} height={200} alt="heart" />
           <h2 className={styles.counter}>
             <Counter ceiling={result.chance} duration={5000} />%
           </h2>
