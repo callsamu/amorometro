@@ -44,7 +44,7 @@ export default function Amor() {
       <SiteBody>
         <h1>{result.first} + {result.second} </h1>
         <div className={styles.heartContainer}>
-          <Image src={"/heart.svg"} width={200} height={200} alt="heart" />
+          <Image src="/heart.webp" width={200} height={200} alt="heart" />
           <h2 className={styles.counter}>
             <Counter ceiling={result.chance} duration={5000} />%
           </h2>

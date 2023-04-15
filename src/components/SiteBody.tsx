@@ -14,7 +14,7 @@ export default function SiteBody({ children }: Props) {
             <header className={styles.header}>
                 <nav className={styles.nav}>
                     <Link href="/">
-                        <Image src="/logo.svg" alt="amorometro" width={250} height={200}/>
+                        <Image src="/logo.webp" alt="amorometro" width={250} height={200}/>
                     </Link>
 
                 </nav>
