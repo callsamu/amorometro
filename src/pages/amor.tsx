@@ -5,7 +5,6 @@ import { computeChance } from "@/lib/calculator";
 import Paragraph from "@/components/Paragraph";
 import Counter from "@/components/Counter";
 import getResultTexts from "@/lib/text";
-import Image from "next/image";
 import styles from "@/styles/Amor.module.css";
 import ShareButton from "@/components/ShareButton";
 
@@ -44,7 +43,7 @@ export default function Amor() {
       <SiteBody>
         <h1>{result.first} + {result.second} </h1>
         <div className={styles.heartContainer}>
-          <Image src="/heart.webp" width={200} height={200} alt="heart" />
+          <img src="/heart.webp" width="200" height="200" alt="heart" />
           <h2 className={styles.counter}>
             <Counter ceiling={result.chance} duration={5000} />%
           </h2>
