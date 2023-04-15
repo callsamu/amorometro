@@ -7,7 +7,13 @@ export interface Result {
 }
 
 function capitalize(str: string): string {
-  return str.charAt(0).toLocaleUpperCase() + str.slice(1);
+  return str
+    .split(" ")
+    .map(word => {
+      const first = word.charAt(0).toLocaleUpperCase();
+      const rest = word.slice(1);
+      return first + rest;
+    }).join(" ");
 }
 
 export function computeChance(name1: string, name2: string): Result {
