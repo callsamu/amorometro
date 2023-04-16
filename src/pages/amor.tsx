@@ -68,7 +68,7 @@ export default function Amor() {
       <SiteHead title={`${result.first} + ${result.second} | Amorometro`}/>
       <SiteBody style={{ 
         height: height === 0 ? "auto" : height, 
-        transition: !isVisible ? "none" : "height 2s ease-in-out"
+        transition: !isVisible ? "none" : "height 2s",
       }}>
         <div ref={heart}>
           <h1>{result.first} + {result.second} </h1>

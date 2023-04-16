@@ -26,7 +26,6 @@ export default function Home() {
     <>
       <SiteHead title="Amorometro" />
       <SiteBody 
-        style={{ transform: isInstalled ? "translateY(50%)" : "none" }}
         className={styles.body}>
         { isInstalled ? null : <h1> La Mejor Calculadora de Amor </h1> }
 
