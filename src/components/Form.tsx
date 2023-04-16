@@ -28,11 +28,21 @@ export default function Form() {
       <div className={styles.inputFlex}>
         <div className={styles.labelFlex}>
           <label className={styles.label} htmlFor="first">Tu Nombre</label>
-          <input className={styles.inputText} type="text" placeholder="Maria" name="first" id="first"/>
+          <input className={styles.inputText} 
+                 type="text" 
+                 placeholder="Maria" 
+                 name="first" 
+                 autoComplete="off"
+                 id="first"/>
         </div>
         <div className={styles.labelFlex}>
           <label className={styles.label} htmlFor="second">Nombre de tu Crush</label>
-          <input className={styles.inputText} type="text" placeholder="Juan" name="second" id="second"/>
+          <input className={styles.inputText} 
+                 type="text" 
+                 placeholder="Juan" 
+                 name="second" 
+                 autoComplete="off"
+                 id="second"/>
         </div>
       </div>
       <input className={styles.submit} type="submit" value="Calcular Amor"/>
