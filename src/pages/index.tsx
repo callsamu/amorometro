@@ -2,23 +2,32 @@ import SiteHead from '../components/SiteHead';
 import SiteBody from '../components/SiteBody';
 import Paragraph from '../components/Paragraph';
 import Form from '../components/Form';
+import styles from '../styles/Home.module.css';
 import { useEffect, useState } from 'react';
 
 const standalone = "(display-mode: standalone)";
 
 export default function Home() {
   const [isInstalled, considerInstalled] = useState(false);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     if (matchMedia(standalone).matches) {
       considerInstalled(true)
     }
+    setReady(true);
   }, []);
+
+  if (!ready) {
+    return <></>;
+  }
 
   return (
     <>
       <SiteHead title="Amorometro" />
-      <SiteBody>
+      <SiteBody 
+        style={{ transform: isInstalled ? "translateY(50%)" : "none" }}
+        className={styles.body}>
         { isInstalled ? null : <h1> La Mejor Calculadora de Amor </h1> }
 
         <Form />
