@@ -25,7 +25,7 @@ export function computeChance(name1: string, name2: string): Result {
   return {
     first: capitalize(name1),
     second: capitalize(name2),
-    chance: hash.hashNumber(m + n, limit) / 100
+    chance: Math.round(hash.hashNumber(m + n, limit) / 100),
   };
 }
 
