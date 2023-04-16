@@ -1,13 +1,14 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 import styles from '../styles/SiteBody.module.css';
 import SiteParticles from './SiteParticles';
 import Link from 'next/link';
 
 interface Props {
+    style: CSSProperties;
     children: ReactNode;
 }
 
-export default function SiteBody({ children }: Props) {
+export default function SiteBody({ style, children }: Props) {
     return (
         <>
             <header className={styles.header}>
@@ -19,7 +20,7 @@ export default function SiteBody({ children }: Props) {
                 </nav>
             </header>
             <SiteParticles />
-            <main className={styles.main}>
+            <main style={style} className={styles.main}>
                 { children }
             </main>
         </>
