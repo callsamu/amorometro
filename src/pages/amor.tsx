@@ -28,14 +28,17 @@ function getName(router: NextRouter, order: Order): string {
   }
 }
 
+// Hardcoded
+const padding = 15 * 2;
+
 export default function Amor() {
   const router = useRouter()
 
   const [height, setHeight] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
-  const heart  = useRef<HTMLDivElement>(null);
-  const UI     = useRef<HTMLDivElement>(null);
+  const resultDisplay = useRef<HTMLDivElement>(null);
+  const resultDisplayEnd = useRef<HTMLDivElement>(null);
 
 
   const result = computeChance(
@@ -46,22 +49,26 @@ export default function Amor() {
   const handleClick = () => router.push("/")
 
   useEffect(() => {
-    if (!heart.current) return;
+    if (!resultDisplay.current) return;
 
-    // Hardcoded
-    const padding = 15 * 2;
-    setHeight(heart.current.offsetHeight + padding);
+    setHeight(resultDisplay.current.offsetHeight + padding);
 
     setTimeout(() => { 
-      if (!UI.current || !heart.current) return;
       setIsVisible(true);
-      setHeight(heart.current.offsetHeight + UI.current.offsetHeight + padding);
-
-      setTimeout(() => {
-        setHeight(0);
-      }, 3000)
-    }, 5000);
+      setTimeout(() => setHeight(0), 3000)
+    }, 4500);
   }, []);
+
+  useEffect(() => {
+    if (!resultDisplay.current || !resultDisplayEnd.current) return;
+
+    if (isVisible && height !== 0) {
+      const displayHeight = resultDisplay.current.offsetHeight;
+      const displayEndHeight = resultDisplayEnd.current.offsetHeight;
+
+      setHeight(displayHeight + displayEndHeight + padding);
+    }
+  }, [isVisible, height]);
 
   return (
     <>
@@ -70,7 +77,7 @@ export default function Amor() {
         height: height === 0 ? "auto" : height, 
         transition: !isVisible ? "none" : "height 2s",
       }}>
-        <div ref={heart}>
+        <div ref={resultDisplay}>
           <h1>{result.first} + {result.second} </h1>
           <div className={styles.heartContainer}>
             <img src="/heart.webp" width="200" height="200" alt="heart" />
@@ -79,7 +86,7 @@ export default function Amor() {
             </h2>
           </div>
         </div>
-        <div ref={UI} style={{ display: !isVisible ? "none" : "block" }}>
+        <div ref={resultDisplayEnd} style={{ display: !isVisible ? "none" : "block" }}>
           <Paragraph className={styles.text}> {getResultTexts(result)} </Paragraph>
           <button onClick={handleClick} className={styles.button}>Regressar</button>
           <ShareButton results={result} className={styles.button} />
