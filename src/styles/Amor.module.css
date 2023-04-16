@@ -1,7 +1,7 @@
 @keyframes fadeInUp {
   from { 
     opacity: 0;
-    transform: translateY(4rem);
+    transform: translateY(1rem);
   }
   to { 
     opacity: 1;
@@ -9,13 +9,12 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
+  from { opacity: 0;  }
   to { opacity: 1; }
 }
 
 .text {
   animation: fadeIn 2s;
-  animation-delay: 5s;
   animation-fill-mode: backwards;
 }
 
@@ -34,8 +33,8 @@
 
 .button {
   width: 8rem;
-  padding: 0.5rem 1rem;
-  margin: 1rem 1rem;
+  margin: 0.5rem 0.5rem; 
+  padding: 0.5rem;
 
   font-size: 1.1rem;
 
@@ -48,7 +47,7 @@
   font-weight: 500;
 
   animation: fadeIn 2s;
-  animation-delay: 7s;
+  animation-delay: 2s;
   animation-fill-mode: backwards;
 }
 
