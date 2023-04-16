@@ -4,8 +4,8 @@ import SiteParticles from './SiteParticles';
 import Link from 'next/link';
 
 interface Props {
-    style: CSSProperties;
-    children: ReactNode;
+    style?: CSSProperties;
+    children?: ReactNode;
 }
 
 export default function SiteBody({ style, children }: Props) {
