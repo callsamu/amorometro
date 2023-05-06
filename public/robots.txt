@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /amor
+
+# Host
+Host: https://amorometro.com
+
+# Sitemaps
+Sitemap: https://amorometro.com/sitemap.xml
