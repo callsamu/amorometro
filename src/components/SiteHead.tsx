@@ -13,7 +13,7 @@ export default function SiteHead({ title }: Props) {
     ¡Obtén resultados precisos y confiables en segundos!
   `);
 
-  const url = "https://amorometro.pages.dev";
+  const url = "https://amorometro.com";
 
     return (
         <Head>

@@ -11,7 +11,7 @@ type Props = {
 }
 
 export default function ShareButton({ className, results }: Props) {
-  const [url, setUrl] = useState("https://amorometro.pages.dev/");
+  const [url, setUrl] = useState("https://amorometro.com/");
 
   const description = stripIdents(`        
     Según amorometro, la compatibilidad entre ${results.first} 
