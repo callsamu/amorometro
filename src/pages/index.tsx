@@ -9,18 +9,12 @@ const standalone = "(display-mode: standalone)";
 
 export default function Home() {
   const [isInstalled, considerInstalled] = useState(false);
-  const [ready, setReady] = useState(false);
 
   useEffect(() => {
     if (matchMedia(standalone).matches) {
       considerInstalled(true)
     }
-    setReady(true);
   }, []);
-
-  if (!ready) {
-    return <></>;
-  }
 
   return (
     <>
