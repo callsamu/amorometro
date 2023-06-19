@@ -9,7 +9,7 @@ interface Props {
 export default function SiteHead({ title }: Props) {
   const description = stripIdents(`
     Descubre la verdadera compatibilidad con 
-    tu pareja con nuestro Amorómetro basado en numerología. 
+    tu pareja con nuestra calculadora de amor basada en numerología. 
     ¡Obtén resultados precisos y confiables en segundos!
   `);
 

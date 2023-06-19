@@ -28,8 +28,10 @@ export default function Home() {
         { isInstalled ? null :
           <>
             <Paragraph>
-            Bienvenido a Amorómetro - ¡Su Calculadora de Numerología del Amor!
-            </Paragraph>
+            ¿Estás buscando a tu amor verdadero? 
+						¿Quieres saber si esa persona especial es tu pareja perfecta? 
+						¡No busques más! Amorometro es la calculadora de amor que necesitas.
+						</Paragraph>
 
             <Paragraph>
             Nuestra calculadora utiliza la antigua ciencia de la numerología
@@ -53,9 +55,9 @@ export default function Home() {
             </Paragraph>
 
             <Paragraph>
-            ¿Por qué esperar? ¡Ingrese sus nombres en Amorómetro y descubra la verdad
-            sobre su relación hoy mismo!
-            </Paragraph>
+            No esperes más para descubrir si esa persona especial es tu amor verdadero. 
+						¡Usa Amorometro hoy mismo y fortalece tu relación!            
+						</Paragraph>
           </>
         }
       </SiteBody>
