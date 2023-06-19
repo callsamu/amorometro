@@ -34,24 +34,20 @@ export default function Home() {
 						</Paragraph>
 
             <Paragraph>
-            Nuestra calculadora utiliza la antigua ciencia de la numerología
+            Nuestra calculadora utiliza la antigua ciencia de la 
+						<a href="https://es.wikipedia.org/wiki/Numerolog%C3%ADa">numerología</a>
             para revelar la compatibilidad entre dos personas. Al analizar las
             energías y vibraciones de ambos nombres, Amorómetro puede brindarte
             una visión única y precisa de su relación.
             </Paragraph>
 
             <Paragraph>
-            La numerología se basa en la idea de que los números tienen un
-            significado especial y pueden revelar aspectos ocultos de nuestras vidas.
-            Al calcular los valores numéricos de sus nombres, podemos determinar la
-            compatibilidad y el potencial de su relación.
-            </Paragraph>
-
-            <Paragraph>
             Tenga en cuenta que Amorómetro es solo para fines de entretenimiento y
             no es un sustituto de un consejo profesional. Los resultados generados
             por nuestra calculadora deben ser utilizados como una guía y no como una
-            garantía del éxito de su relación.
+            garantía del éxito de su relación. Si necesitas ayuda adicional, puedes 
+						visitar a <a href="https://www.lovelearnings.com/">LoveLearnings</a>, 
+						donde encontrarás consejos sobre relaciones y amor que te ayudarán.
             </Paragraph>
 
             <Paragraph>
