@@ -24,7 +24,7 @@ export function computeChance(name1: string, name2: string): Result {
 	return {
 	  first: name1,
 	  second: name2,
-	  chance: 100,
+	  chance: 99.9,
 	};
   }
 
